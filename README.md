@@ -1,10 +1,6 @@
 # Sempre Alerta
 Projeto utilizado em exemplos de aula da disciplina Tecnologias Para Aplicações WEB
 
-* Alunos:
-  * Aluno 1
-  * Aluno 2
-
 ## Tema do Projeto
 Um chefe escoteiro precisa, em todo encontro, fazer o controle de frequência dos escoteiros e anotar quesitos como utilização do uniforme, apresentação e participação.
 
@@ -16,15 +12,15 @@ Portanto, deseja-se automatizar o processo de mensuração de resultados. Para i
 * permita a marcação dos itens avaliativos citados.
 
 ## Detalhes de Implementação
-Neste tópico serão informados os softwares e frameworks, que foram utilizados e merecem destaque.
-### Banco de Dados
-* MySQL versão > 5.7
 ### Backend
-* Spring (Boot, MVC, Data);
-* Maven.
+* [Criação do Projeto](docs/a-criacao-do-projeto.md)
+* [Modelo do Banco de Dados e Mapeamento](docs/b-banco-de-dados-e-mapeamento.md)
+* [Repositórios](docs/c-repositorios.md)
+* [Services e Controllers](docs/d-services-e-controller.md)
+
 ### Frontend
-* AngularJS;
-* Bootstrap;
+* [Criação do Projeto](docs/d-dependencias-frontend.md)
+* Continua
 
 ## Instalação/Execução
 ### Requisitos
@@ -32,7 +28,7 @@ Neste tópico serão informados os softwares e frameworks, que foram utilizados 
 * Cliente git
 
 ### Procedimento de Instalação e Execução (Linux/OSx)
-1. Baiar o código fonte:
+1. Baixar o código fonte:
         
         git clone https://github.com/edussm/sempre-alerta.git
 2. Acessar a pasta do projeto:
@@ -42,10 +38,8 @@ Neste tópico serão informados os softwares e frameworks, que foram utilizados 
     
         ./mvnw test
 4. Executar
-    
-        ./mvnw spring-boot:run
-ou
-    
+
         ./mvnw clean package
-        java -jar target/sempre-alerta-1.0.0-SNAPSHOT.jar
+        java -jar backend/target/sempre-alerta-backend-0.0.1-SNAPSHOT.jar
+
 5. Acessar a interface no endereço: http://localhost:8080
