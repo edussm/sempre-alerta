@@ -1,7 +1,6 @@
 package br.fpu.taw.service;
 
-import java.util.Collection;
-import java.util.Optional;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,26 +13,26 @@ public class PatrulhaService {
 	@Autowired
 	PatrulhaRepository patrulhaRepository;
 	
-	public Optional<Collection<Patrulha>> listar() {
-		return Optional.of(patrulhaRepository.findAll());
+	public List<Patrulha> listar() {
+		return patrulhaRepository.findAll();
 	}
 	
-	public Optional<Patrulha> buscarPorId(Long id) {
-		return Optional.of(patrulhaRepository.findOne(id));
+	public Patrulha buscarPorId(Long id) {
+		return patrulhaRepository.findOne(id);
 	}
 
-	public Optional<Patrulha> criar(Patrulha patrulha) {
+	public Patrulha criar(Patrulha patrulha) {
 		if (patrulha == null || patrulha.getId() != null) {
 			throw new IllegalArgumentException();
 		}
-		return Optional.ofNullable(patrulhaRepository.save(patrulha));
+		return patrulhaRepository.save(patrulha);
 	}
 
-	public Optional<Patrulha> atualizar(Patrulha patrulha) {
+	public Patrulha atualizar(Patrulha patrulha) {
 		if (patrulha == null || patrulha.getId() == null) {
 			throw new IllegalArgumentException();
 		}
-		return Optional.ofNullable(patrulhaRepository.save(patrulha));
+		return patrulhaRepository.save(patrulha);
 	}
 
 	public void apagar(Long id) {
